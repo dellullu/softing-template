@@ -1,0 +1,77 @@
+[{
+	"id": "starting",
+	"objectId": "14418",
+	"itemId": "14418",
+	"objectSource": "curatedcontentitemtemplates",
+	"itemSource": "curatedcontentitemtemplates",
+	"metadata": {
+		"added": "2024-06-26T08:14:38+00:00"
+	},
+	"additionalData": {},
+	"tags": [{
+		"id": "63",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "173",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "259",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "553",
+		"source": "curatedcontentitemtemplates"
+	}]
+}, {
+	"id": "defaultcolor",
+	"objectId": "6443",
+	"itemId": "14490",
+	"objectSource": "curatedcontentitemtemplates",
+	"itemSource": "curatedcontentitemtemplates",
+	"metadata": {
+		"added": "2024-07-24T05:28:10+00:00"
+	},
+	"additionalData": {
+		"NebulaData": {
+			"Colors": "#000000,#000000"
+		}
+	},
+	"tags": [{
+		"id": "56",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "60",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "101",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "153",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "547",
+		"source": "curatedcontentitemtemplates"
+	}]
+}, {
+	"id": "end",
+	"objectId": "14418",
+	"itemId": "14418",
+	"objectSource": "curatedcontentitemtemplates",
+	"itemSource": "curatedcontentitemtemplates",
+	"metadata": {
+		"added": "2024-06-26T08:14:38+00:00"
+	},
+	"additionalData": {},
+	"tags": [{
+		"id": "63",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "173",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "259",
+		"source": "curatedcontentitemtemplates"
+	}, {
+		"id": "553",
+		"source": "curatedcontentitemtemplates"
+	}]
+}]
