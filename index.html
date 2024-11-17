@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softing Template Guide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            width: 100%;
+        }
+        .button {
+            background-color: #222;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid #555;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .button:hover {
+            background-color: #555;
+            border-color: #777;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .last-page {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 40px;
+        }
+        .content img, .content video {
+            max-width: 70%;
+            max-height: 70vh;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .arrow {
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            background: none;
+            transition: color 0.3s;
+        }
+        .arrow:hover {
+            color: #aaa;
+        }
+        .arrow.inactive {
+            visibility: hidden;
+        }
+        .last-page img {
+            max-width: 60%;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="start" class="content">
+            <button class="button" onclick="navigate(1)">How to use the Softing Template</button>
+        </div>
+
+        <div id="slide1" class="content" style="display: none;">
+            <img src="start_code.png" alt="Start Code">
+            <div class="navigation">
+                <button class="arrow" onclick="navigate(1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="slide2" class="content" style="display: none;">
+            <img src="color_code.png" alt="Color Code">
+            <div class="navigation">
+                <button class="arrow" onclick="navigate(-1)">&#9664;</button>
+                <button class="arrow" onclick="navigate(1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="slide3" class="content" style="display: none;">
+            <img src="end_code.png" alt="End Code">
+            <div class="navigation">
+                <button class="arrow" onclick="navigate(-1)">&#9664;</button>
+                <button class="arrow" onclick="navigate(1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="slide4" class="content" style="display: none;">
+            <video src="softing.mp4" controls></video>
+            <div class="navigation">
+                <button class="arrow" onclick="navigate(-1)">&#9664;</button>
+                <button class="arrow" onclick="navigate(1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="slide5" class="content last-page" style="display: none;">
+            <img src="softing_template.png" alt="Softing Template Preview">
+            <a href="softing_template.txt" download="softing_template.txt">
+                <button class="button">Download Softing Template</button>
+            </a>
+            <div class="navigation">
+                <button class="arrow" onclick="navigate(-1)">&#9664;</button>
+                <button class="arrow" onclick="navigate(-4)">&#9654;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = ['start', 'slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
+        let currentIndex = 0;
+
+        function navigate(direction) {
+            document.getElementById(slides[currentIndex]).style.display = 'none';
+            currentIndex += direction;
+            document.getElementById(slides[currentIndex]).style.display = 'block';
+            updateArrows();
+        }
+
+        function updateArrows() {
+            const globalNav = document.querySelectorAll('.navigation');
+
+            if (currentIndex === 0) {
+                globalNav[0].style.display = 'none';
+            } else {
+                globalNav[0].style.display = 'flex';
+            }
+
+            if (currentIndex === slides.length - 1) {
+                globalNav[globalNav.length - 1].querySelector('button:nth-child(2)').style.display = 'inline-block';
+            }
+        }
+
+        function initialize() {
+            for (let i = 1; i < slides.length; i++) {
+                document.getElementById(slides[i]).style.display = 'none';
+            }
+            updateArrows();
+        }
+
+        initialize();
+    </script>
+</body>
+</html>
